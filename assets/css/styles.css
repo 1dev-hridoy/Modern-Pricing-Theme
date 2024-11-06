@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: transparent;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.theme-toggle {
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+}
+
+.most-popular {
+    display: inline-block;
+    background-color: #4285f4;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+}
+
+.pricing-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #f8f9ff;
+    border-radius: 15px;
+    padding: 2rem;
+    width: 350px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.plan-label {
+    display: inline-block;
+    background-color: #e8eeff;
+    color: #4285f4;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.price {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+ul {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.included i {
+    color: #4285f4;
+}
+
+.not-included {
+    color: #666;
+}
+
+.not-included i {
+    color: #ff4444;
+}
+
+button {
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3367d6;
+}
+
+/* Light Theme */
+.light-theme {
+    background-color: white;
+    color: #333;
+}
+
+.light-theme .dark-icon {
+    display: none;
+}
+
+/* Dark Theme */
+.dark-theme {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.dark-theme .light-icon {
+    display: none;
+}
+
+.dark-theme .subtitle {
+    color: #aaa;
+}
+
+.dark-theme .card {
+    background-color: #2a2a2a;
+}
+
+.dark-theme .plan-label {
+    background-color: #3a3a3a;
+}
+
+.dark-theme .not-included {
+    color: #999;
+}
+
+@media (max-width: 768px) {
+    .pricing-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
